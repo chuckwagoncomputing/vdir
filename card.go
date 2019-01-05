@@ -14,6 +14,7 @@ type Card struct {
 	Telephones    []TypedValue `vdir:"tel"`
 	Email         []TypedValue
 	Url           []TypedValue
+	Related       []TypedValue
 	Title         string
 	Role          string
 	Org           string
@@ -21,6 +22,7 @@ type Card struct {
 	Note          string
 	URL           string
 	Photo         Photo
+	Geo           string
 
 	Rev    string
 	ProdId string
@@ -28,6 +30,8 @@ type Card struct {
 
 	XICQ   string `vdir:"x-icq"`
 	XSkype string `vdir:"x-skype"`
+	XAIM    string `vdir:"x-aim"`
+	XJABBER string `vdir:"x-jabber"`
 	IMPP   []IMPP
 }
 
@@ -56,6 +60,7 @@ type Photo struct {
 type Address struct {
 	Type            []string `vdir:",param"`
 	Label           string   `vdir:",param"`
+	Geo             string   `vdir:",param"`
 	PostOfficeBox   string
 	ExtendedAddress string
 	Street          string
